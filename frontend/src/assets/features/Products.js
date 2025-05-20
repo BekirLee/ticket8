@@ -32,7 +32,7 @@ export const createProduct = createAsyncThunk(
   }
 );
 
-export const counterSlice = createSlice({
+export const productSlice = createSlice({
   name: "products",
   initialState,
   reducers: {
@@ -60,10 +60,10 @@ export const counterSlice = createSlice({
       })
       .addCase(deleteProduct.fulfilled, (state, action) => {
         state.products = state.products.filter(
-          (item) => item._id !== action.payload._id
+          (item) => item._id !== action.payload
         );
         state.allProducts = state.allProducts.filter(
-          (item) => item._id !== action.payload._id
+          (item) => item._id !== action.payload
         );
       })
       .addCase(createProduct.fulfilled, (state, action) => {
@@ -73,6 +73,6 @@ export const counterSlice = createSlice({
   },
 });
 
-export const { searchProduct, sortAZ, sortZA } = counterSlice.actions;
+export const { searchProduct, sortAZ, sortZA } = productSlice.actions;
 
-export default counterSlice.reducer;
+export default productSlice.reducer;

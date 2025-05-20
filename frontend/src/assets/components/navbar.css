@@ -1,0 +1,43 @@
+.menuResponsive {
+    display: none;
+    transition: ease-in .5s;
+}
+
+.navBar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: auto;
+    background-size: cover;
+    background-image: url('https://preview.colorlib.com/theme/tasty/images/bg_2.jpg.webp');
+}
+
+.wrapper ul {
+    display: flex;
+    align-items: center;
+}
+
+.heroNavbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: relative;
+    width: 100%;
+}
+
+img {
+    width: 100%;
+    object-fit: contain;
+}
+
+
+@media (min-width: 300px) and (max-width: 600px) {
+    .menuResponsive {
+        display: block !important;
+    }
+
+    .wrapper {
+        display: none !important;
+    }
+}

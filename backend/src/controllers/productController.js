@@ -33,7 +33,7 @@ export const getProduct = async (req, res) => {
 
 export const deleteProduct = async (req, res) => {
   try {
-    const product = await Product.delete(req.params.id);
+    const product = await Product.findByIdAndDelete(req.params.id);
     res.json("deleted");
   } catch (err) {
     console.log(err.message);

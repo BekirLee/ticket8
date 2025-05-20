@@ -3,9 +3,9 @@ import Products from "../components/Products";
 
 const Home = () => {
   return (
-    <>
+    <div className="container-custom">
       <Products />
-    </>
+    </div>
   );
 };
 
